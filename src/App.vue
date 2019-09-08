@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <components-trans-ways></components-trans-ways>
   </div>
 </template>
 
 <script>
+import componentsTransWays from './components/componentsTransWays'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    componentsTransWays
+  }
 }
 </script>
 
