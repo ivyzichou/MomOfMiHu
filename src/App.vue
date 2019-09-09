@@ -1,18 +1,12 @@
 <template>
   <div id="app">
     <router-view/>
-    <components-trans-ways></components-trans-ways>
   </div>
 </template>
 
 <script>
-import componentsTransWays from './components/componentsTransWays'
-
 export default {
-  name: 'App',
-  components: {
-    componentsTransWays
-  }
+  name: 'App'
 }
 </script>
 
