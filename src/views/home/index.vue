@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'componentsTransWays'
+  name: 'home'
 }
 </script>
 
