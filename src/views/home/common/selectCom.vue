@@ -1,7 +1,8 @@
 <template>
   <div>
     <el-cascader placeholder = "试试搜索"
-                 :options = "options"></el-cascader>
+                 :options = "options">
+    </el-cascader>
   </div>
 </template>
 
@@ -36,5 +37,4 @@ export default {
 </script>
 
 <style>
-
 </style>
