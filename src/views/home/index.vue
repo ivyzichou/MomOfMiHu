@@ -1,16 +1,18 @@
 <template>
     <div>
-        22222
-        <tree-map></tree-map>
+      <SelectCom></SelectCom>
+      <tree-map></tree-map>
     </div>
 </template>
 
 <script>
 import TreeMap from '@/components/treeMap'
+import SelectCom from './common/selectCom'
 export default {
   name: 'home',
   components: {
-    TreeMap
+    TreeMap,
+    SelectCom
   }
 }
 </script>

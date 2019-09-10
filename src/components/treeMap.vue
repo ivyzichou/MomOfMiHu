@@ -1,7 +1,8 @@
 <template>
   <div>
     <ve-tree
-            :data = "chartData"></ve-tree>
+            :data = "chartData"
+            :settings = "chartSettings"></ve-tree>
   </div>
 </template>
 
@@ -53,6 +54,25 @@ export default {
     }
   },
   data () {
+    this.chartSettings = {
+      seriesMap: {
+        tree: {
+          orient: 'vertical',
+          symbol: 'rect',
+          symbolSize: '25',
+          itemStyle: {
+            color: '#ffffff'
+          },
+          label: {
+            show: true
+          },
+          lineStyle: {
+            width: 2,
+            color: '#000100'
+          }
+        }
+      }
+    }
     return {
     }
   }

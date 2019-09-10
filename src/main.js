@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import { Cascader } from 'element-ui'
+
+Vue.component(Cascader.name, Cascader)
 
 // Vue.config.productionTip = false
 
