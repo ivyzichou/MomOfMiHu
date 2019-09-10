@@ -32,6 +32,10 @@ export default {
         ]
       }]
     }
+  },
+  created () {
+    console.log('----6767----', document.getElementsByClassName('el-cascader-menu__list'))
+    // let list1 = document.getElementsByClassName('el-cascader-menu__list')
   }
 }
 </script>
