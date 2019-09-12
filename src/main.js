@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { Cascader } from 'element-ui'
+import './styles/index.css'
 
 Vue.component(Cascader.name, Cascader)
 

@@ -1,12 +1,14 @@
 <template>
   <div>
-    <el-cascader placeholder = "试试搜索"
-                 :options = "options"
-                 @expand-change = "getCenter">
-      <template slot-scope="{node, data}">
-        <span>{{data.label}}</span>
-      </template>
-    </el-cascader>
+    <div>
+      <el-cascader placeholder = "试试搜索"
+                  :options = "options"
+                  @expand-change = "getCenter">
+        <template slot-scope="{node, data}">
+          <span>{{data.label}}</span>
+        </template>
+      </el-cascader>
+    </div>
   </div>
 </template>
 
@@ -58,15 +60,21 @@ export default {
           list1[i].style.textAlignLast = 'center'
         }
         let arr = list1[list1.length - 1].getElementsByClassName('el-cascader-node')
-        // let arr_active = list1[list1.length - 1].getElementsByClassName('el-cascader-node is-active')
+        // let arrActive = arr[arr.length - 1].getElementsByClassName('el-cascader-node__prefix')[0]
         // if (arr_active) {
         //   console.log('sdkjhfksdhfsdkjfhdfhal')
         // }
-        // console.log('!!!!hjhkjh!!!', arr)
+        console.log('1234567890', arr[arr.length - 1])
+        // console.log('!!!!hjhkjh!!!', arr[arr.length - 1].getElementsByClassName('el-cascader-node__prefix'))
         // for (let i = 0; i < arr.length; i++) {
         //   console.log('haahahahahah', arr[i])
         // }
-        // arr[arr.length - 1].removeChild
+        // arr[arr.length - 1].removeChild()
+        // if (arr[arr.length - 1].getElementsByTagName('el-icon-check')) {
+        //   let child = arr[arr.length - 1].getElementsByTagName('i')
+        //   arr[arr.length - 1].removeChild(child)
+        // }
+        // arr[arr.length - 1].removeChild()
         arr[arr.length - 1].addEventListener('click', function () {
           console.log('最后一个！！！')
         })

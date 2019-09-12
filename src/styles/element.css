@@ -1,0 +1,11 @@
+.selectCom .el-scrollbar__view {
+  /* li:last-child {
+      color: lime;
+  } */
+}
+.el-cascader-menu:first-child li:last-child {
+    color: #000
+}
+.el-cascader-menu li:last-child{
+    color: aqua
+}
