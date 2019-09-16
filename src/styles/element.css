@@ -1,11 +1,9 @@
-.selectCom .el-scrollbar__view {
-  /* li:last-child {
-      color: lime;
-  } */
-}
-.el-cascader-menu:first-child li:last-child {
+/* .el-cascader-menu:first-child li:last-child {
     color: #000
-}
-.el-cascader-menu li:last-child{
-    color: aqua
+} */
+/* 覆盖element ui中原有的样式 */
+
+/* 隐藏点击鼠标后隐藏选中箭头样式 */
+.el-cascader-menu li:last-child .el-icon-check {
+    display: none
 }
