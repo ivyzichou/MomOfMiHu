@@ -57,16 +57,17 @@ export default {
     },
     modifyArray (array) {
       console.log('??????', array[0].children)
+      console.log('===asadsa====', this.selectComList)
       if (array) {
-        for (let j = 0; j < array.length; j++) {
-          if (array[j].children) {
-            for (let i = 0; i < array[j].children.length; i++) {
-              this.selectComList.children[i].label = array[j].children[i].name
-              this.selectComList.children[i].value = array[j].children[i].value
-              this.selectComList.children[i].children = this.modifyArray(array[j].children[i].children)
-            }
+        // for (let j = 0; j < array.length; j++) {
+        if (array.children) {
+          for (let i = 0; i < array.children.length; i++) {
+            this.selectComList.children[i].label = array.children[i].name
+            this.selectComList.children[i].value = array.children[i].value
+            this.selectComList.children[i].children = this.modifyArray(array.children[i].children)
           }
         }
+        // }
         console.log('=======', this.selectComList)
       }
     }
