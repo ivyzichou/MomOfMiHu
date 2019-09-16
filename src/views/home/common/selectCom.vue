@@ -2,6 +2,7 @@
   <div>
     <div>
       <el-cascader placeholder = "试试搜索"
+                   filterable
                   :options = "options"
                   @expand-change = "getCenter">
         <template slot-scope="{node, data}">
