@@ -1,7 +1,14 @@
 <template>
     <div>
-      <SelectCom></SelectCom>
-      <tree-map></tree-map>
+      <!-- <SelectCom></SelectCom> -->
+      <!-- <tree-map></tree-map> -->
+      <div class="line-item"
+           v-for="(index,item) in list"
+           :key="index"
+           :class="selected === index ? 'select' : ''"
+           @click="handleClick(index)">
+        {{item}}
+      </div>
     </div>
 </template>
 
@@ -16,6 +23,8 @@ export default {
   },
   data () {
     return {
+      selected: '',
+      list: [1, 2, 3, 4, 5],
       selectComList: [], // 筛选框的数组
       treeMapList: [], // 树图的数组
       recieveList: [{
@@ -47,6 +56,9 @@ export default {
     this.transArray(this.recieveList)
   },
   methods: {
+    handleClick (index) {
+      this.selected = index
+    },
     transArray (array) {
       if (array.length !== 0) {
         this.treeMapList = array[0].value
@@ -65,6 +77,7 @@ export default {
             this.selectComList.children[i].label = array.children[i].name
             this.selectComList.children[i].value = array.children[i].value
             this.selectComList.children[i].children = this.modifyArray(array.children[i].children)
+            return array.children
           }
         }
         // }
@@ -76,4 +89,12 @@ export default {
 </script>
 
 <style>
+.line-item {
+  margin: 0.3rem;
+  font-size: 0.26rem;
+  color: brown;
+}
+.select {
+  color: yellow;
+}
 </style>
